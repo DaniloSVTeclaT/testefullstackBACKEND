@@ -24,7 +24,7 @@ createConnection({
             migrationsDir:
                 "./src/database/migrations/"
             ,
-            entitiesDir:"./src/models"
+            entitiesDir:"./src/models/"
             
         
     }
