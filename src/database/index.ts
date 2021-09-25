@@ -21,9 +21,9 @@ createConnection({
     cli:{
         
             migrationsDir:
-                "./src/database/migrations/"
+                "./dist/database/migrations/"
             ,
-            entitiesDir:"./src/models"
+            entitiesDir:"./dist/models"
             
         
     }

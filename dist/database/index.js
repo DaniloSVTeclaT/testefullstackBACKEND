@@ -19,7 +19,7 @@ var typeorm_1 = require("typeorm");
         "./src/database/migrations/*ts"
     ],
     cli: {
-        migrationsDir: "./src/database/migrations/",
-        entitiesDir: "./src/models"
+        migrationsDir: "./dist/database/migrations/",
+        entitiesDir: "./dist/models"
     }
 });
