@@ -14,10 +14,10 @@ var typeorm_1 = require("typeorm");
         }
     },
     entities: [
-        "./src/models/*ts"
+        "./dist/models"
     ],
     migrations: [
-        "./src/database/migrations/*ts"
+        "./src/database/migrations/"
     ],
     cli: {
         migrationsDir: "./dist/database/migrations/",
