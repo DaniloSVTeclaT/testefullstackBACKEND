@@ -9,7 +9,7 @@ const users_bv_Router = Router();
 
 
 users_bv_Router.post('/',async(request,response)=>{
-          console.log(">>>>>>>>>>>>>>" + process.env.DATABASE_URL);
+          //console.log(">>>>>>>>>>>>>>" + process.env.DATABASE_URL);
           const {name,email,password,tasks} = request.body
           const createUser = new CreateUserService()
 
@@ -22,7 +22,7 @@ users_bv_Router.post('/',async(request,response)=>{
               
           })
 
-          
+
          
            
           const userWithoutPassword = {
