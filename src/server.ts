@@ -1,8 +1,9 @@
 import 'reflect-metadata'
 import express, {Request,Response, NextFunction } from 'express'
+import './database'
 import 'express-async-errors'
 import routes from './routes';
-import './database'
+
 import AppError from './errors/AppError';
 import cors from 'cors';
 const app = express();
@@ -18,7 +19,7 @@ app.use((err:Error,request:Request,response:Response,next:NextFunction)=>{
         })
     }
     console.log(err)
-    console.log(">>>>>>>>>>>>>>"+process.env.DATABASE_URL)
+    //console.log(">>>>>>>>>>>>>>"+process.env.DATABASE_URL)
      
     return response.status(500).json({
         status:'error',
@@ -26,6 +27,6 @@ app.use((err:Error,request:Request,response:Response,next:NextFunction)=>{
     })
 })
 
-app.listen(process.env.PORT ||5000,()=>{
-    console.log('Server start sucess on port 3333'+process.env.DATABASE_URL)
+app.listen(process.env.PORT ||3333,()=>{
+    console.log('Server start sucess on port 3333')
 })

@@ -118,7 +118,6 @@ tasks_Router.get('/:id',async(request,response)=>{
       updated_at: tasks.updated_at,
     };
 
-
     return response.json(tasksViews)
     
   
