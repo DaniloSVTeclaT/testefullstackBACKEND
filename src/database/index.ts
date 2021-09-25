@@ -21,7 +21,7 @@ const config: any = {
     synchronize: process.env.SYNCHRONIZE,
     extra: {
         ssl: {
-            require: true,
+            require: false,
             rejectUnauthorized: false
         }
     },
