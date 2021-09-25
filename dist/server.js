@@ -21,11 +21,12 @@ app.use(function (err, request, response, next) {
             message: err.message
         });
     }
+    console.log(err);
     return response.status(500).json({
         status: 'error',
         message: 'Internal server error'
     });
 });
-app.listen(process.env.PORT ||5000, function () {
-    console.log('Server start sucess on port 3000');
+app.listen(process.env.PORT || 5000, function () {
+    console.log('Server start sucess on port 3333');
 });

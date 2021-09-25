@@ -44,55 +44,58 @@ var CreateUser1631492719021 = /** @class */ (function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, queryRunner.createTable(new typeorm_1.Table({
-                            name: 'userss_tasks',
-                            columns: [
-                                {
-                                    name: "id",
-                                    type: 'uuid',
-                                    isPrimary: true,
-                                    generationStrategy: 'uuid',
-                                    default: 'uuid_generate_v4()',
-                                },
-                                {
-                                    name: 'order',
-                                    type: 'integer',
-                                    isGenerated: true
-                                },
-                                {
-                                    name: 'name',
-                                    type: 'varchar',
-                                },
-                                {
-                                    name: 'email',
-                                    type: 'varchar',
-                                    isUnique: true
-                                },
-                                {
-                                    name: 'tasks',
-                                    type: 'varchar',
-                                },
-                                {
-                                    name: 'password',
-                                    type: 'varchar',
-                                },
-                                {
-                                    name: 'status',
-                                    type: 'boolean',
-                                },
-                                {
-                                    name: 'created_at',
-                                    type: 'timestamp',
-                                    default: 'now()',
-                                },
-                                {
-                                    name: 'updated_at',
-                                    type: 'timestamp',
-                                    default: 'now()',
-                                }
-                            ]
-                        }))];
+                    case 0: return [4 /*yield*/, queryRunner.query('CREATE EXTENSION IF NOT EXISTS "uuid-ossp"')];
                     case 1:
+                        _a.sent();
+                        return [4 /*yield*/, queryRunner.createTable(new typeorm_1.Table({
+                                name: 'userss_tasks',
+                                columns: [
+                                    {
+                                        name: "id",
+                                        type: 'uuid',
+                                        isPrimary: true,
+                                        generationStrategy: 'uuid',
+                                        default: 'uuid_generate_v4()',
+                                    },
+                                    {
+                                        name: 'order',
+                                        type: 'integer',
+                                        isGenerated: true
+                                    },
+                                    {
+                                        name: 'name',
+                                        type: 'varchar',
+                                    },
+                                    {
+                                        name: 'email',
+                                        type: 'varchar',
+                                        isUnique: true
+                                    },
+                                    {
+                                        name: 'tasks',
+                                        type: 'varchar',
+                                    },
+                                    {
+                                        name: 'password',
+                                        type: 'varchar',
+                                    },
+                                    {
+                                        name: 'status',
+                                        type: 'boolean',
+                                    },
+                                    {
+                                        name: 'created_at',
+                                        type: 'timestamp',
+                                        default: 'now()',
+                                    },
+                                    {
+                                        name: 'updated_at',
+                                        type: 'timestamp',
+                                        default: 'now()',
+                                    }
+                                ]
+                            }))];
+                    case 2:
                         _a.sent();
                         return [2 /*return*/];
                 }
