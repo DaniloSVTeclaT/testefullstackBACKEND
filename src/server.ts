@@ -18,6 +18,7 @@ app.use((err:Error,request:Request,response:Response,next:NextFunction)=>{
         })
     }
     console.log(err)
+    console.log(">>>>>>>>>>>>>>"+process.env.DATABASE_URL)
      
     return response.status(500).json({
         status:'error',
