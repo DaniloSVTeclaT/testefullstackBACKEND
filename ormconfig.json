@@ -14,9 +14,9 @@
     ],
     "cli":{
         "migrationsDir":[
-            "./src/database/migrations"
+            "./src/database/migrations/"
         ],
-        "entitiesDir":"./src/models*"
+        "entitiesDir":"./src/models"
         
     }
 }
