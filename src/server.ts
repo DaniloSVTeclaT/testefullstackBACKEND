@@ -28,5 +28,5 @@ app.use((err:Error,request:Request,response:Response,next:NextFunction)=>{
 })
 
 app.listen(process.env.PORT ||3333,()=>{
-    console.log('Server start sucess on port 3333')
+    console.log('Server start sucess on port '+process.env.POR)
 })
