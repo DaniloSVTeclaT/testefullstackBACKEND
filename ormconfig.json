@@ -8,6 +8,7 @@
             "require":true,
             "rejectUnauthorized":false
         }
+        
     },
     "entities":[
         "./src/models/*ts"
