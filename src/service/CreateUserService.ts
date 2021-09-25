@@ -7,7 +7,7 @@ interface Request {
     password:string;
     tasks:string;
     status:boolean;
-   
+
 
 }
 import AppError from '../errors/AppError'
