@@ -5,12 +5,12 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/server.js",
+    "ssss": "node dist/server.js",
     
     "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
     
-    "migration:run": "npm run typeorm migration:run -- -t=each"
+    "start": "npm run typeorm migration:run -- -t=each"
   },
   "dependencies": {
     "@types/bcryptjs": "^2.4.2",
