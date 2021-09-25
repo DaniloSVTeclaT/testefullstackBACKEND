@@ -11,6 +11,7 @@ sessions.post('/',async(request,response)=>{
             email,
             password
           })
+          
 
           const userWithoutPassword = {            
             id: user.id,

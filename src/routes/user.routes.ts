@@ -6,8 +6,6 @@ import ensureAuthenticated from '../middleware/ensureAuthenticated'
 const users_bv_Router = Router();
 
 
-
-
 users_bv_Router.post('/',async(request,response)=>{
           //console.log(">>>>>>>>>>>>>>" + process.env.DATABASE_URL);
           const {name,email,password,tasks} = request.body

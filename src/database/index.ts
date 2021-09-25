@@ -8,27 +8,9 @@ const rootDir = process.env.NODE_ENV === "development" ?
 const extensionFile = process.env.NODE_ENV === "development" ?
     "ts" :
     "js";
-
+console.log(">>>>>>>>>>>>>>>>>>>>"+extensionFile)    
 const config: any = {
 
-    type: "postgres",
-    url: process.env.DATABASE_URL,
-    
-    extra: {
-        ssl: {
-            require: false,
-            rejectUnauthorized: false
-        }
-    },
-    entities: [
-        rootDir + `/app/models/*.${extensionFile}`
-    ],
-    migrations: [
-        rootDir + `/database/migrations/*.${extensionFile}`
-    ],
-    cli: {
-        "migrationsDir": rootDir + "/database/migrations"
-    }
 };
 
-createConnection(config).catch(error => console.log(error));
+createConnection().catch(error => console.log(error));
